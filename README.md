@@ -3,9 +3,12 @@
 > **Autonomous Embodied VLA Agent Framework**
 > A heavily modified, specialized fork of the Hermes Agent framework. Designed for raw, generalized interaction rather than API-specific wrappers.
 
+> ⚠️ **Disclaimer**
 > Проект экспериментальный и написан ПОЛНОСТЬЮ с помощью AI.
-> 
 > Это значит, что в коде и архитектуре всё ещё возможны ошибки, и перед использованием на реальном публичном сервере проект нужно тестировать с осторожностью.
+>
+> *This project is experimental and written ENTIRELY with the help of AI.*
+> *This means that errors in the code and architecture are still possible, and the project should be tested with caution before being used on a real public server.*
 
 ---
 
