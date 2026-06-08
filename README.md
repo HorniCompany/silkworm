@@ -1,4 +1,4 @@
-# 🌙 Oneiro Framework
+# 🌙 Silkworm Framework
 
 > **Autonomous Embodied VLA Agent Framework**
 > A heavily modified, specialized fork of the Hermes Agent framework. Designed for raw, generalized interaction rather than API-specific wrappers.
@@ -11,11 +11,11 @@
 
 ## 👁️ Core Vision: General Embodied Agent (Raw I/O)
 
-The defining characteristic of the **Oneiro Framework** is its absolute rejection of high-level API wrappers (like Mineflayer). We are building a low-level, high-performance core (C++ / TypeScript) that interacts with any environment exactly as a human does:
+The defining characteristic of the **Silkworm Framework** is its absolute rejection of high-level API wrappers (like Mineflayer). We are building a low-level, high-performance core (C++ / TypeScript) that interacts with any environment exactly as a human does:
 - **Visual Input:** Interpreting raw screen buffers and pixel data natively.
 - **Action Tokens to Raw Output:** The Reflex SLM outputs semantic **Action Tokens** (e.g., `<ACTION_MOVE_FWD>` or `{"cmd": "hit"}`). The custom C++ core instantly intercepts these tokens and translates them into OS-level hardware keystrokes (`W`, `A`, `S`, `D`, `Mouse Delta`).
 
-This architectural shift transforms Oneiro from a mere "game bot" into a true **General Embodied Agent**. Whether it's Minecraft, a terminal, or a 3D engine, Oneiro plays it by looking at the screen and pressing buttons.
+This architectural shift transforms Oneiro from a mere "game bot" into a true **General Embodied Agent**. Whether it's Minecraft, a terminal, or a 3D engine, Silkworm plays it by looking at the screen and pressing buttons.
 
 ---
 
@@ -23,7 +23,7 @@ This architectural shift transforms Oneiro from a mere "game bot" into a true **
 
 We leverage the **Hermes Agent framework (by Nous Research)** as our cognitive foundation, wrapping our C++/TS hardware core in its powerful persistent learning loop.
 
-To achieve both high-frequency reaction times and complex long-term reasoning, Oneiro splits cognitive load via a **Mixture of Agents (MoA)**:
+To achieve both high-frequency reaction times and complex long-term reasoning, Silkworm splits cognitive load via a **Mixture of Agents (MoA)**:
 
 ### 1. The Reflex Agent (Motor Cortex)
 - **Models:** `Oneiro MC Lite` (e.g., Gemma 1B - 3B)
@@ -44,7 +44,7 @@ To achieve both high-frequency reaction times and complex long-term reasoning, O
 
 ## 🛡️ "Friend or Foe" System (152-FZ Compliance)
 
-To comply with strict data localization and privacy laws (e.g., Federal Law No. 152-FZ regarding biometric data), Oneiro **does not use voice biometrics** to recognize who is speaking.
+To comply with strict data localization and privacy laws (e.g., Federal Law No. 152-FZ regarding biometric data), Silkworm **does not use voice biometrics** to recognize who is speaking.
 
 Instead, it uses a **Vector Injection** system:
 1. The voice chat plugin (e.g., Simple Voice Chat) transmits the speaker's in-game `UUID` to the backend.
@@ -57,16 +57,19 @@ Instead, it uses a **Vector Injection** system:
 
 ## 🗄️ Memory & Persistent Learning
 
-Inherited and enhanced from the base Hermes architecture, Oneiro features a persistent **Closed Learning Loop**:
+Inherited and enhanced from the base Hermes architecture, Silkworm features a persistent **Closed Learning Loop**:
 - **SQLite + FTS5:** Replaces unreliable vector-only RAG for session history, ensuring lightning-fast and accurate recall of past events, player interactions, and grudges.
 - **Skill Generation:** When the Planner Agent successfully solves a complex new problem, it automatically generates a reusable "Skill" (Markdown format), allowing it to bypass heavy reasoning steps in the future.
 - **Context Preservation:** Oneiro remembers who built what, who attacked whom, and maintains a consistent personality across server restarts.
 
 ---
 
-## 🚀 The Oneiro Lineup
+## 🚀 The Oneiro Lineup (Running on Silkworm)
 
 We are building a scalable lineup of agents to suit different deployment needs:
 - **Oneiro MC Lite:** (~1B-2B parameters) Designed to run entirely locally on player hardware.
 - **Oneiro MC Medium:** (e.g. Gemma 4 E2B/E4B) Balanced for self-hosting or light server loads.
 - **Oneiro MC (Flagship):** (e.g., Gemma 4 12B) The primary server-side intellect, driving the most complex narrative characters in the Horni universe.
+
+*(Note: **Silkworm** is the underlying engine. **Oneiro** is the specific neuro-product / AI personality that runs on top of this framework in the Horni universe).*
+
